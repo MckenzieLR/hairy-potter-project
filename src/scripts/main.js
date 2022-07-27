@@ -3,6 +3,7 @@ import {makePottery} from './PotteryWheel.js'
 import {firePottery} from './Kiln.js'
 import {toSellOrNotToSell} from './PotteryCatalog.js'
 import {usePottery} from './PotteryCatalog.js'
+import {PotteryList} from './PotteryList.js'
 
 
 
@@ -49,5 +50,9 @@ const potterySaleArray = usePottery()
 console.log(potterySaleArray)
 // Invoke the component function that renders the HTML list
 
+console.log(PotteryList())
+
+const parentHTMLElement = document.querySelector(".potteryList")
 
 
+parentHTMLElement.innerHTML = PotteryList()
